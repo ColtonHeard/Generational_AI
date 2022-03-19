@@ -1,12 +1,11 @@
-#include "Agents/Agent.h"
+#include "Agent.h"
 
-static Id agentCount = 0;
+static int agentCount = 0;
 
 void initAgent(Agent agent) {
     agent.id = agentCount;
     agentCount++;
 
-    agent.health = 100;
     agent.food = 100;
     agent.water = 100;
     agent.wood = 0;

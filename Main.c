@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "Board.c"
+#include "Board/Board.c"
 
 int main(void) {
 
@@ -8,12 +8,9 @@ int main(void) {
 
     Board game_board;
     
-    for (int i = 0; i < 50; i++)
-    {
-        game_board.board[i].value = i;
-    }
+    initBoard(10, 10);
     
-    printf("%d\n", game_board.board[10].value);
+    printf("%d\n", game_board.tiles[5][5].value);
 
     exit(EXIT_SUCCESS);
 }
